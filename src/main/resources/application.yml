@@ -1,0 +1,13 @@
+server:
+  port: 8082
+  tomcat:
+    uri-encoding: UTF-8
+
+# 禁用内存
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+  mvc:
+    date-format: yyyy-MM-dd
+

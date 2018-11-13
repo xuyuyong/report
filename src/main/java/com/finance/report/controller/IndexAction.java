@@ -19,6 +19,6 @@ public class IndexAction {
 
     @GetMapping("/index")
     public String index(){
-        return "dashboard";
+        return "main";
     }
 }

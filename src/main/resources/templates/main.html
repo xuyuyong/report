@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>报表</title>
+
+    <link href="css/bootstrap.min.css" th:href="@{/bootstrap/bootstrap.min.css}" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" th:href="@{/plugins/font-awesome/css/font-awesome.css}" rel="stylesheet">
+
+    <link href="css/animate.css" th:href="@{/css/animate.css}" rel="stylesheet">
+    <link href="css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+    <script src="js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+    <script src="js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.js}"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"
+            th:src="@{/plugins/metisMenu/jquery.metisMenu.js}"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"
+            th:src="@{/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js" th:src="@{/js/inspinia.js}"></script>
+    <script src="js/plugins/pace/pace.min.js" th:src="@{/plugins/pace/pace.min.js}"></script>
 </head>
 <body>
-$END$
+    <!--引入抽取的topbar-->
+    <!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+    <div th:replace="commons/bar::#sidebar"></div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <div th:replace="commons/bar::topbar"></div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center m-t-lg">
+                        <h1>
+                            INSPINIA Static Seed Project for BS4
+                        </h1>
+                        <small>
+                            It is an application skeleton for a typical web app. You can use it to quickly bootstrap
+                            your webapp projects and dev environment for these projects.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
